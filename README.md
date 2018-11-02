@@ -1,6 +1,7 @@
 # grpc-proto
 
 Pratice to user a maven project to build jar from protobuf definition file
+This artifact is used by grpc-pratice project
 
 1. .protos are located at src/main/proto which is the default location for protobuf-maven-plugin
 2. mvn install will generate .jar which include all built classes
