@@ -1,0 +1,23 @@
+
+syntax = "proto3";
+
+
+option java_multiple_files = true;
+option java_package = "me.yorick.poc.grpc";
+option java_outer_classname = "ModelLoaderProto";
+option objc_class_prefix = "";
+
+package model.laoder;
+
+message ModelLoadRequest{
+    string config_path=1;
+}
+
+message ModelLoadResponse{
+	bool success=1;
+	string model_id=2;
+}
+
+service ModelLoader{
+	rpc Load (ModelLoadRequest) returns (ModelLoadResponse){};
+}
